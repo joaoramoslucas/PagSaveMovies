@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de Filmes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat&family=Numans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <canvas id="fundo-interativo"></canvas>
+    <main>
+      <img src="./img/player.svg" alt="player icon" />
+      <form>
+        <input
+          class="input-item"
+          id="input-item"
+          type="text"
+          placeholder="Digite o filme que deseja salvar"
+        />
+        <button class="button-item" id="adicionar-item" type="button">Salvar Filme</button>
+      </form>
+
+      <div class="container-lista">
+        <h2>Lista de Filmes</h2>
+        <hr />
+
+        <ul id="lista-de-compras"></ul>
+        <p class="mensagem-lista-vazia">Não há nenhum filme na lista.</p>
+      </div>
+    </main>
+    <script src="index.js" type="module"></script>
+    <script src="./scripts/components/fundo-interativo.js"></script>
+  </body>
+</html>
