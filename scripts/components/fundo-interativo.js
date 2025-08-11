@@ -55,7 +55,7 @@ let particlesArray = [];
 function init() {
   particlesArray = [];
   const numberOfParticles = (canvas.height * canvas.width) / 10000;
-  const colors = ['#66ff00ff', '#0004ffff', '#ff0000ff', '#e5ff00ff'];
+  const colors = ['#66ff00ff', '#0004ffff', '#ff0000ff', '#000000ff', '#ffffffff', '#ff00ffff' ];
 
   for (let i = 0; i < numberOfParticles; i++) {
     const size = Math.random() * 2.5 + 1;
@@ -68,9 +68,9 @@ function init() {
 
 function animate() {
   const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
-  gradient.addColorStop(0, '#2c0a4f');
-  gradient.addColorStop(1, '#05040a');
-  gradient.addColorStop(0.7, '#0f0c29');
+  gradient.addColorStop(0, '#59099bff');
+  gradient.addColorStop(1, '#59099bff');
+  gradient.addColorStop(0.7, '#000000ff');
 
   ctx.fillStyle = gradient;
   ctx.fillRect(0, 0, canvas.width, canvas.height);
