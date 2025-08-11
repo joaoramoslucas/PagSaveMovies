@@ -200,9 +200,6 @@ ul {
     position: fixed;
 }
 
-/* --------------------------- */
-/* RESPONSIVIDADE PARA MOBILE */
-/* --------------------------- */
 @media (max-width: 480px) {
     h2 {
         font-size: 18px;
@@ -221,6 +218,11 @@ ul {
     .button-item {
         font-size: 16px;
         padding: 12px 14px;
+    }
+
+    html, body {
+    max-width: 100%;
+    overflow-x: hidden;
     }
 
     main {
