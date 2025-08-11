@@ -16,12 +16,11 @@
 
 body {
     height: 100vh;
-    background-repeat: no-repeat;
-    background: var(--degrade-azul);
-
+    background: var(--degrade-azul) no-repeat;
     display: flex;
     align-items: center;
     flex-direction: column;
+    padding: 16px;
 }
 
 main {
@@ -32,8 +31,9 @@ main {
     display: flex;
     flex-direction: column;
 
-    width: 440px;
-    padding: 56px;
+    width: 100%;
+    max-width: 440px;
+    padding: 32px 24px;
 
     align-items: center;
     border-radius: 16px;
@@ -45,12 +45,14 @@ h2 {
     line-height: 32px;
     color: var(--cor-primaria);
     font-family: var(--fonte-titulo);
+    text-align: center;
 }
 
 hr {
     border: none;
     margin-bottom: 24px;
     border-bottom: 3px dotted var(--cor-primaria);
+    width: 100%;
 }
 
 p {
@@ -62,7 +64,7 @@ p {
 }
 
 .input-item {
-    width: 307px;
+    width: 100%;
     display: block;
     padding: 12px 16px;
     border-radius: 24px;
@@ -86,6 +88,8 @@ p {
     color: var(--neutro);
     font-family: var(--fonte-texto);
     background-color: var(--cor-primaria);
+    width: 100%;
+    max-width: 307px;
 }
 
 form {
@@ -93,12 +97,14 @@ form {
     display: flex;
     align-items: center;
     flex-direction: column;
+    width: 100%;
 }
 
 .lista-item-container {
     gap: 10px;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .delete-item-icon {
@@ -108,13 +114,13 @@ form {
     transition: transform 0.2s ease-in-out;
 }
 
-
 .delete-item-icon:hover {
     transform: scale(1.1); 
 }
 
 ul {
     list-style-type: none;
+    width: 100%;
 }
 
 .input-checkbox {
@@ -192,4 +198,53 @@ ul {
     width: 100%;
     height: 100%;
     position: fixed;
+}
+
+/* --------------------------- */
+/* RESPONSIVIDADE PARA MOBILE */
+/* --------------------------- */
+@media (max-width: 480px) {
+    h2 {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .input-item {
+        font-size: 14px;
+        padding: 10px 14px;
+    }
+
+    .button-item {
+        font-size: 16px;
+        padding: 12px 14px;
+    }
+
+    main {
+        margin-top: 32px;
+        padding: 24px 16px;
+    }
+
+    .checkbox-customizado {
+        width: 18px;
+        height: 18px;
+    }
+
+    .checked::after {
+        width: 4px;
+        height: 12px;
+    }
+
+    .container-lista {
+        max-height: 250px;
+    }
+
+    .delete-item-icon,
+    .edit-item-icon {
+        width: 20px;
+        height: 20px;
+    }
 }
