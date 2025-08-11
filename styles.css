@@ -5,13 +5,12 @@
 }
 
 :root {
-    --preto: #131730;
-    --neutro: #F9F9F9;
-    --cor-primaria: #001aff;
+    --preto: #4e58af;
+    --cor-primaria: #4e58af;
     --cor-secundaria: #C2373F;
     --fonte-texto: 'Numans', sans-serif;
+    --neutro: rgba(255, 255, 255, 0.6); 
     --fonte-titulo: "Krona One", sans-serif;
-    --degrade-azul: linear-gradient(180deg, #000000 0%, #26327F 100%);
 }
 
 body {
